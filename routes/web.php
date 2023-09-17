@@ -46,3 +46,8 @@ Route::middleware([
 
 
 });
+
+Route::get('/register', function () {
+    return Inertia::render('register');
+})->name('register');
+

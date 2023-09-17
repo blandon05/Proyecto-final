@@ -48,6 +48,12 @@ class ServiceController extends Controller
         ]);
     }
 
+    public function update(ServiceRequest $request, Service $service)
+    {
+        $service->update($request->validated());
+        return redirect()->route('services.show', $service);
+    }
+
     public function destroy(Service $service)
     {
         $service->delete();

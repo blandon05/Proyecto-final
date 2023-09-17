@@ -12,6 +12,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 
 defineProps({
+  
     form: {
         type: Object,
         required: true,
@@ -61,6 +62,15 @@ defineEmits(['submit'])
                 />
                 <InputError :message="$page.props.errors.Initial_date" class="mt-2" />
             </div>
+            <div>
+                <div>
+    <select class="mt-1 block w-full" name="Service_id" id="Service_id" v-model="form.Service_id">
+        <option value="" disabled>Seleccionar Servicio</option>
+        <option v-for="service in services" :value="service.id">{{ service.Name }}</option>
+    </select>
+</div>
+
+            </div>
             <div class="col-span-6 sm:col-span-6">
                 <InputLabel for="End_date" value="End_date" />
                 <TextInput
@@ -83,18 +93,7 @@ defineEmits(['submit'])
                 />
                 <InputError :message="$page.props.errors.Price" class="mt-2" />
             </div>
-            <h1 class="font-semibold text-xl text-gray-800 leading-tight">
-                    Crear Reserva {{services}}
-                </h1>
 
-            <div class="col-span-6 sm:col-span-6">
-                <InputLabel for="description" value="Description" />
-                
-                <select  class="mt-1 block w-full" name="Service_id" id="Service_id" v-model="form.State">
-                    <option value="Service_id">{{services}}</option>s
-                </select>
-                <InputError :message="$page.props.errors.Service_idtate" class="mt-2" />
-            </div>
             <div class="col-span-6 sm:col-span-6">
                 <InputLabel for="Quantity_people" value="Quantity_people" />
                 <TextInput

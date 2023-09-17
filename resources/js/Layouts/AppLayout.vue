@@ -7,6 +7,7 @@ import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import Sidebar from '@/Components/Sidebar.vue';
 
 defineProps({
     title: String,
@@ -48,18 +49,12 @@ const logout = () => {
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
-                                </NavLink>
-                                <NavLink :href="route('projects.index')">
-                                    Proyectos
-                                </NavLink>
-                                <NavLink :href="route('services.index')" :active="route().current('services')">
-                                    Servicios
-                                </NavLink>
-                                 <NavLink :href="route('bookings.index')" :active="route().current('booking')">
-                                    Reservas
-                                </NavLink> 
+                                   <!-- Sidebar Component -->
+                                
+                            <Sidebar>
+                                
+                            </Sidebar>
+                                
                             </div>
                         </div>
 

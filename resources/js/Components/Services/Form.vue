@@ -35,7 +35,7 @@ defineEmits(['submit'])
         </template>
         <template #form>
             <div class="col-span-6 sm:col-span-6">
-                <InputLabel for="Name" value="Name" />
+                <InputLabel for="Name" value="Nombre" />
                 <TextInput
                     id="Name"
                     v-model="form.Name"
@@ -46,7 +46,7 @@ defineEmits(['submit'])
                 <InputError :message="$page.props.errors.Name" class="mt-2" />
             </div>
             <div class="col-span-6 sm:col-span-6">
-                <InputLabel for="Price" value="Price" />
+                <InputLabel for="Price" value="Precio" />
                 <TextInput
                     id="Price"
                     v-model="form.Price"
@@ -58,7 +58,7 @@ defineEmits(['submit'])
             </div>
 
             <div class="col-span-6 sm:col-span-6">
-                <InputLabel for="description" value="Description" />
+                <InputLabel for="description" value="Descripción" />
                 
                 <select   class="mt-1 block w-full" name="State" id="State" v-model="form.State">
                     <option disabled  value="">Seleccione una Opción</option>
