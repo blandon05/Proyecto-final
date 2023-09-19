@@ -25,13 +25,17 @@ const deleteBooking = id => {
 <template>
   <AppLayout>
     <div>
-        <div >
+        <div class="">
+                
             <h1 class="font-semibold text-xl text-gray-800 leading-tight">
                 Detalle reserva
             </h1>
         </div>
 
-        <div class="py-12">
+        <div class="grid grid-cols-6 gap-4">
+            <div class="...">
+            </div>
+            <div class="py-12 col-span-4">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
@@ -45,6 +49,7 @@ const deleteBooking = id => {
                         <p class="text-gray-700">{{ booking.Price }}</p>
                         <p class="text-gray-700">{{ booking.Service_id }}</p>
                         <p class="text-gray-700">{{ booking.Quantity_people }}</p>
+                        <p class="text-gray-700">{{ booking.State }}</p>
                     </div>
                 </div>
             </div>
@@ -64,6 +69,10 @@ const deleteBooking = id => {
                 </div>
             </div>
         </div>
+        </div>
+           
+  
+        
     </div>
   </AppLayout>
       

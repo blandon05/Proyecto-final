@@ -24,14 +24,15 @@ const deleteProject = (id) => {
 <template>
     <AppLayout>
         <div>
-            <div class="grid grid-cols-6 gap-4">
+            <div >
                 <h1 class=" mt-4 font-semibold text-xl text-gray-800 leading-tight">
                     Detalle Rol
                 </h1>
             </div>
 
-            <div class="..."></div>
-
+            <div class="grid grid-cols-6 gap-4">
+            <div class="...">
+            </div>
             <div class="py-12 col-span-4">
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div
@@ -54,12 +55,12 @@ const deleteProject = (id) => {
                     >
                         <div class="p-6 bg-white border-b border-gray-200">
                             <Link
-                                :href="route('projects.index')"
+                                :href="route('Roles.index')"
                                 class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
                                 >Volver</Link
                             >
                             <Link
-                                :href="route('projects.edit', role.id)"
+                                :href="route('Roles.edit', role.id)"
                                 class="ml-2 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"
                                 >Editar</Link
                             >
@@ -72,6 +73,7 @@ const deleteProject = (id) => {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </AppLayout>

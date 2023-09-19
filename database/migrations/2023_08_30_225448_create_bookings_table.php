@@ -20,6 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('Service_id');
             $table->foreign('Service_id')->references('id')->on('services');
             $table->integer('Quantity_people');
+            $table->string('State');
             $table->timestamps();
         });
     }

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('Name_Rol');
             $table->text('Description');
+            $table->string('State');
             $table->timestamps();
         });
     }

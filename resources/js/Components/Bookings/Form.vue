@@ -33,7 +33,7 @@ defineEmits(['submit'])
 <template>
     <FormSection @submitted="$emit('submit')">
         <template #title>
-            {{ updating ? 'Editar Reserva' : 'Crear nueva Reserva' }}
+            {{ updating ? '' }}
         </template>
   
         <template #description>

@@ -51,6 +51,7 @@ const deletebooking = id => {
                                                 <th class="px-4 py-2">Precio</th>
                                                 <th class="px-4 py-2">Servicio</th>
                                                 <th class="px-4 py-2">Cantidad de personas</th>
+                                                <th class="px-4 py-2">Estado</th>
                                                 <th class="px-4 py-2">Acciones</th>
                                             </tr>
                                         </thead>
@@ -62,6 +63,7 @@ const deletebooking = id => {
                                                     <td class="border px-4">{{ booking.Price}}</td>
                                                     <td class="border px-4">{{ booking.Service_id }}</td>
                                                     <td class="border px-4">{{ booking.Quantity_people }}</td>
+                                                    <td class="border px-4">{{ booking.State }}</td>
                                                     <td class="border px-4 py-4" style="width: 300px">
                                                         <Link :href="route('bookings.edit', booking.id)"
                                                             class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
@@ -71,11 +73,7 @@ const deletebooking = id => {
                                                             class="ml-2 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
                                                         Ver
                                                         </Link>
-                                                        <Link
-                                                            class="ml-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-                                                            @click="deletebooking(booking.id)">
-                                                        Eliminar
-                                                        </Link>
+                                                        
                                                     </td>
                                                 </tr>
                                             </tbody>

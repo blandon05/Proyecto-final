@@ -11,6 +11,7 @@ import RoleForm from "@/Components/Roles/Form.vue";
 const form = useForm({
     Name_Rol: "",
     Description: "",
+    State: "",
 });
 </script>
 

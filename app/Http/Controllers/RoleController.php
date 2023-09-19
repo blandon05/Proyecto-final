@@ -32,17 +32,17 @@ class RoleController extends Controller
     }
 
 
-    public function edit(Role $role)
+    public function edit(Role $rol)
     {
         return inertia('Role/Edit', [
-            'role' =>  $role,
+            'role' =>  $rol,
         ]);
     }
 
-    public function update(RoleRequest $request, Role  $role)
+    public function update(RoleRequest $request, Role  $rol)
     {
-         $role->update($request->validated());
-        return redirect()->route('Roles.show',  $role);
+         $rol->update($request->validated());
+        return redirect()->route('Roles.show',  $rol);
     }
 
     public function destroy(Role  $role)

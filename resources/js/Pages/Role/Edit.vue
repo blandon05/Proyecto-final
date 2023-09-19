@@ -17,6 +17,7 @@ const props = defineProps({
 const form = useForm({
     Name_Rol: props.role.Name_Rol,
     Description: props.role.Description,
+    State: props.role.State,
 });
 </script>
 

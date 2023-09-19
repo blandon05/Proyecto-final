@@ -6,6 +6,8 @@ import SectionBorder from '@/Components/SectionBorder.vue';
 import TwoFactorAuthenticationForm from '@/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue';
 import UpdatePasswordForm from '@/Pages/Profile/Partials/UpdatePasswordForm.vue';
 import UpdateProfileInformationForm from '@/Pages/Profile/Partials/UpdateProfileInformationForm.vue';
+import { Link } from "@inertiajs/inertia-vue3";
+
 
 defineProps({
     confirmsTwoFactorAuthentication: Boolean,
@@ -14,12 +16,21 @@ defineProps({
 </script>
 
 <template>
-    <AppLayout title="Profile">
-        <template #header>
+    <div>
+        <div class="mt-5 py-5">
+            <Link
+            :href="route('dashboard')"
+            class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+            >Volver al la pagina principal</Link
+        >
+        </div>
+       
+   
+        <div>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Profile
+                Perfil
             </h2>
-        </template>
+        </div>
 
         <div>
             <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
@@ -53,5 +64,5 @@ defineProps({
                 </template>
             </div>
         </div>
-    </AppLayout>
+    </div>
 </template>

@@ -40,6 +40,7 @@ defineProps({
                                             <tr>
                                                 <th class="px-4 py-2">Nombre de Rol </th>
                                                 <th class="px-4 py-2">Descripcion</th>
+                                                <th class="px-4 py-2">Estado</th>
                                                 <th class="px-4 py-2">Acciones</th>
                                             </tr>
                                         </thead>
@@ -49,6 +50,7 @@ defineProps({
                                               
                                                     <td class="border px-4">{{ rol.Name_Rol }}</td>
                                                     <td class="border px-4">{{ rol.Description }}</td>
+                                                    <td class="border px-4">{{ rol.State }}</td>
                                                     <td class="border px-4 py-4" style="width: 300px">
                                                         <Link :href="route('Roles.edit', rol.id)"
                                                             class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">

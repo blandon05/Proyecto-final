@@ -58,6 +58,16 @@ defineEmits(['submit'])
                 />
                 <InputError :message="$page.props.errors.Description" class="mt-2" />
             </div>
+            <div class="col-span-6 sm:col-span-6">
+                <InputLabel for="description" value="Descripción" />
+                
+                <select   class="mt-1 block w-full" name="State" id="State" v-model="form.State">
+                    <option disabled  value="">Seleccione una Opción</option>
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+                </select>
+                <InputError :message="$page.props.errors.State" class="mt-2" />
+            </div>
         </template>
 
         <template #actions>
