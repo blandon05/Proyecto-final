@@ -40,10 +40,14 @@ const deleteProject = (id) => {
                     >
                         <div class="p-6 bg-white border-b border-gray-200">
                             <h1 class="text-2xl font-bold mb-4">
-                                {{ role.name }}
+                                {{ role.Name_Rol }}
                             </h1>
                             <p class="text-gray-700 mb-4">
-                                {{ role.description }}
+                                <label class="mb-4" for="">Descripción Rol:</label>
+                                {{ role.Description }}
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                {{ role.State }}
                             </p>
                         </div>
                     </div>

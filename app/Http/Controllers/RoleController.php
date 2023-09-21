@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\RoleRequest;
 use App\Models\Role;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller
@@ -21,28 +22,28 @@ class RoleController extends Controller
     public function store(RoleRequest $request)
     {
         $role = Role::create($request->all());
-        return redirect()->route('Roles.show',  $role);
+        return redirect()->route('Roles.index',  $role);
     }
 
-    public function show(Role  $role)
+    public function show(Role  $Role)
     {
         return inertia('Role/Detail', [
-            'role' =>  $role
+            'role' =>  $Role
         ]);
     }
 
 
-    public function edit(Role $rol)
+    public function edit(Role $Role)
     {
         return inertia('Role/Edit', [
-            'role' =>  $rol,
+            'rol' =>  $Role,
         ]);
     }
 
-    public function update(RoleRequest $request, Role  $rol)
+    public function update(RoleRequest $request, Role  $Role)
     {
-         $rol->update($request->validated());
-        return redirect()->route('Roles.show',  $rol);
+         $Role->update($request->validated());
+        return redirect()->route('Roles.show',  $Role);
     }
 
     public function destroy(Role  $role)
@@ -50,6 +51,11 @@ class RoleController extends Controller
          $role->delete();
         return redirect()->route('Roles.index');
     }
+
+    public function user_list(){
+        $users= User::all();
+        return inertia('Users/Index', ['users'=>$users]
+    );}
 
 
 }

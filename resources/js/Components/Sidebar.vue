@@ -31,6 +31,12 @@ const logout = () => {
 
             </li>
             <li>
+               <Link :href="('users_list')" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+               <span class="ml-3">Clientes</span>
+               </Link>
+              
+            </li>
+            <li>
                <Link :href="route('services.index')" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                <span class="ml-3">Servicios</span>
                </Link>
@@ -43,11 +49,12 @@ const logout = () => {
                
             </li>
             <li>
-               <Link :href="route('register')" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <span class="ml-3">Clientes</span>
+               <Link :href="route('sales.index')" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+               <span class="ml-3">Ventas</span>
                </Link>
-              
+               
             </li>
+            
             <li>
                <Link :href="route('Roles.index')" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                <span class="ml-3">Roles</span>

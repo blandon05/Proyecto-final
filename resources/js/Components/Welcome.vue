@@ -16,8 +16,8 @@
             <div class="mt-6 text-gray-500">
                 <p>Cabañas y Domos para parejas</p>
 
-                <img src="../imagenes/glamping1.png" alt="" style="display: inline-block; margin-right: 20px; height: 400px; width: 400px;">
-                <img src="../imagenes/glamping3.png" alt="" style="display: inline-block; height: 400px; width: 400px;">
+                <img src="../imagenes/glamping2.png" alt="" style="display: inline-block; margin-right: 20px; height: 400px; width: 400px;">
+                <img src="../imagenes/glamping4.png" alt="" style="display: inline-block; height: 400px; width: 400px;">
             </div>
         </div>
 

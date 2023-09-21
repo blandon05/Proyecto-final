@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'BookingsIndex',
+    name: 'BookingsEdit',
 
     data() {
         return {
@@ -18,18 +18,15 @@ export default {
 
     methods: {
     submitForm() {
-    // Realiza la acción para enviar el formulario aquí
-    // Puedes usar Axios u otra biblioteca para hacer una solicitud POST
-    axios.post(route('bookings.update'), this.form)
-      .then(response => {
-       
-      })
-      .catch(error => {
-        console.log(error)
-      });
-  }
-}
-
+            axios.put(route('bookings.update', { booking: this.booking.id }), this.form)
+                .then(response => {
+                    // Manejar la respuesta del servidor después de la actualización
+                })
+                .catch(error => {
+                    console.error('Error al actualizar el recurso:', error);
+                });
+            }
+        }
 }
 </script>
 
@@ -41,6 +38,11 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 const props = defineProps({
     booking: {
+        type: Object,
+        required: true,
+    },
+
+    services: {
         type: Object,
         required: true,
     },
@@ -139,8 +141,10 @@ const props = defineProps({
                 
                     <select   class="mt-1 block w-full" name="State" id="State" v-model="form.State">
                         <option disabled  value="">Seleccione una Opción</option>
-                        <option value="Activo">Activo</option>
-                        <option value="Inactivo">Inactivo</option>
+                        <option value="Activa">Activa</option>
+                        <option value="Inactiva">Inactivo</option>
+                        <option value="EnProceso">En proceso</option>
+                        <option value="Cancelada">Cancelada</option>
                     </select>
                 
                         </div>

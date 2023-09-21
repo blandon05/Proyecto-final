@@ -174,8 +174,10 @@ defineProps({
                 
                                 <select   class="mt-1 block w-full" name="State" id="State" v-model="form.State">
                                     <option disabled  value="">Seleccione una Opción</option>
-                                    <option value="Activo">Activo</option>
-                                    <option value="Inactivo">Inactivo</option>
+                                    <option value="Activa">Activa</option>
+                                    <option value="Inactiva">Inactivo</option>
+                                    <option value="EnProceso">En proceso</option>
+                                    <option value="Cancelada">Cancelada</option>
                                 </select>
                 
                             </div>

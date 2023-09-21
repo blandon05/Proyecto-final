@@ -41,9 +41,17 @@ class BookingController extends Controller
 
     public function edit(Booking $booking)
     {
+        $services = Service::all();
         return inertia('Booking/Edit', [
             'booking' => $booking,
+            'services' => $services
         ]);
+    }
+
+    public function update(BookingRequest $request, Booking $booking)
+    {
+        $booking->update($request->validated());
+        return redirect()->route('bookings.show', $booking);
     }
 
 }

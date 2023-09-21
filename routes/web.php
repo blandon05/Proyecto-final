@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\PermissionsController;
 use Illuminate\Foundation\Application;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SalesController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -40,14 +42,12 @@ Route::middleware([
     Route::resource('projects', ProjectController::class);
     Route::resource('services', ServiceController::class);
     Route::resource('bookings', BookingController::class);
-
+    Route::resource('sales', SalesController::class);
     Route::resource('Roles', RoleController::class);
+    Route::get('users_list', [RoleController::class, 'user_list'])->name('lista_usuarios');
 
-
-
+    Route::resource('Permissions', PermissionsController::class);
 });
 
-Route::get('/register', function () {
-    return Inertia::render('register');
-})->name('register');
+
 
